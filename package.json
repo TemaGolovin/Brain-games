@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/TemaGolovin/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/TemaGolovin/frontend-project-44#readme"
+  "homepage": "https://github.com/TemaGolovin/frontend-project-44#readme",
+  "dependencies": {
+    "make": "^0.8.1"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
 }
