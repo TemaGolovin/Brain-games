@@ -1,13 +1,16 @@
-import { gameLogic } from "../index.js";
-import randNum from "../randNum.js";
+import gameLogic from '../index.js';
+import randNum from '../randNum.js';
+
+const minValueRange = 1;
+const maxValueRange = 50;
 
 const gameQuestionAnswer = () => {
-  const randNumber = randNum();
-  let answerEven = "yes";
+  const randNumber = randNum(minValueRange, maxValueRange);
+  let answerEven = 'yes';
   if (randNumber % 2 === 0) {
-    answerEven;
+    answerEven = 'yes';
   } else {
-    answerEven = "no";
+    answerEven = 'no';
   }
   return [randNumber, answerEven];
 };
