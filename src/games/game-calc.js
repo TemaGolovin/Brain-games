@@ -31,6 +31,6 @@ const gameQuestionAnswer = () => {
 
 const task = 'What is the result of the expression?';
 
-const brainEven = () => gameLogic(gameQuestionAnswer, task);
+const brainCalc = () => gameLogic(gameQuestionAnswer, task);
 
-export default brainEven;
+export default brainCalc;
