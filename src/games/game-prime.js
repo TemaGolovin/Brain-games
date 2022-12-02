@@ -6,7 +6,7 @@ const maxValueRange = 50;
 
 const gameQuestionAnswer = () => {
   const randNumber = randNum(minValueRange, maxValueRange);
-  let answer = '';
+  let answer = 'yes';
   for (let i = 2; i <= randNumber / 2; i += 1) {
     if (randNumber % i === 0) {
       answer = 'no';

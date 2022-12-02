@@ -16,7 +16,7 @@ const gameLogic = (gameQuestionAnswer, task) => {
       }
     } else {
       console.log(
-        `'${answerForGame}' is wrong answer ;(. Correct answer was '${answer}'. Let's try again, ${gameName}!`
+        `'${answerForGame}' is wrong answer ;(. Correct answer was '${answer}'. Let's try again, ${gameName}!`,
       );
       break;
     }
