@@ -12,11 +12,11 @@ const gameLogic = (gameQuestionAnswer, task) => {
     if (answer === answerForGame) {
       console.log('Correct!');
       if (i === 2) {
-        console.log(`Congratulations, ${gameName}`);
+        console.log(`Congratulations, ${gameName}!`);
       }
     } else {
       console.log(
-        `'${answerForGame}' is wrong answer ;(. Correct answer was '${answer}'. Let's try again, ${gameName}!`,
+        `'${answerForGame}' is wrong answer ;(. Correct answer was '${answer}'. Let's try again, ${gameName}!`
       );
       break;
     }
