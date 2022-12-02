@@ -2,7 +2,7 @@ import gameLogic from '../index.js';
 import randNum from '../randNum.js';
 
 const gameQuestionAnswer = () => {
-  const progressionStep = randNum(1, 10); //progression step is generated in the range from 1 to 10
+  const progressionStep = randNum(1, 10); // progression step is generated in the range from 1 to 10
   const firstNumProgression = randNum(1, 20);
   const hiddenNumIndex = randNum(0, 9);
   const lengthProgression = 10;
