@@ -1,22 +1,16 @@
 import gameLogic from '../index.js';
-import randNum from '../randNum.js';
+import randNum from '../helper.js';
 
-const minValueRange = 1;
-const maxValueRange = 50;
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const isEven = (number) => number % 2 === 0;
 
 const gameQuestionAnswer = () => {
-  const randNumber = randNum(minValueRange, maxValueRange);
-  let answerEven = 'yes';
-  if (randNumber % 2 === 0) {
-    answerEven = 'yes';
-  } else {
-    answerEven = 'no';
-  }
-  return [randNumber, answerEven];
+  const randNumber = randNum(1, 50);
+  const expectedAnswer = isEven(randNumber) ? 'yes' : 'no';
+  return [randNumber, expectedAnswer];
 };
 
-const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-const brainEven = () => gameLogic(gameQuestionAnswer, task);
+const brainEven = () => gameLogic(gameQuestionAnswer, description);
 
 export default brainEven;
