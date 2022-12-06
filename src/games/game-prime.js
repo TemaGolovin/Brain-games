@@ -1,25 +1,28 @@
 import gameLogic from '../index.js';
-import randNum from '../randNum.js';
+import randNum from '../helper.js';
 
-const minValueRange = 1;
-const maxValueRange = 50;
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const gameQuestionAnswer = () => {
-  const randNumber = randNum(minValueRange, maxValueRange);
-  let answer = 'yes';
-  for (let i = 2; i <= randNumber / 2; i += 1) {
-    if (randNumber % i === 0) {
-      answer = 'no';
-      break;
-    } else {
-      answer = 'yes';
+const isPrimeNum = (number) => {
+  if (number < 0) {
+    return false;
+  }
+
+  for (let i = 2; i <= number / 2; i += 1) {
+    if (number % i === 0) {
+      return false;
     }
   }
-  return [randNumber, answer];
+
+  return true;
 };
 
-const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameQuestionAnswer = () => {
+  const randNumber = randNum(1, 50);
+  const expectedAnswer = isPrimeNum(randNumber) ? 'yes' : 'no';
+  return [randNumber, expectedAnswer];
+};
 
-const brainPrime = () => gameLogic(gameQuestionAnswer, task);
+const brainPrime = () => gameLogic(gameQuestionAnswer, description);
 
 export default brainPrime;
