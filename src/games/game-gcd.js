@@ -1,8 +1,7 @@
 import gameLogic from '../index.js';
-import randNum from '../randNum.js';
+import randNum from '../helper.js';
 
-const minValueRange = 1;
-const maxValueRange = 50;
+const description = 'Find the greatest common divisor of given numbers.';
 
 const greatestCommonDivisor = (num1, num2) => {
   let x = num1;
@@ -27,15 +26,13 @@ const greatestCommonDivisor = (num1, num2) => {
 };
 
 const gameQuestionAnswer = () => {
-  const randNumber1 = randNum(minValueRange, maxValueRange);
-  const randNumber2 = randNum(minValueRange, maxValueRange);
+  const randNumber1 = randNum(1, 50);
+  const randNumber2 = randNum(1, 50);
   const question = `${randNumber1} ${randNumber2}`;
   const answer = greatestCommonDivisor(randNumber1, randNumber2);
   return [question, String(answer)];
 };
 
-const task = 'Find the greatest common divisor of given numbers.';
-
-const brainGcd = () => gameLogic(gameQuestionAnswer, task);
+const brainGcd = () => gameLogic(gameQuestionAnswer, description);
 
 export default brainGcd;
