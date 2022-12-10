@@ -21,8 +21,9 @@ const colculate = (operator, operandOne, operandTwo) => {
   return resultCalc;
 };
 
+const operators = ['+', '-', '*'];
+
 const gameQuestionAnswer = () => {
-  const operators = ['+', '-', '*'];
   const randNumber1 = randNum(1, 50);
   const randNumber2 = randNum(1, 50);
   const randOperator = operators[randNum(0, operators.length - 1)];
