@@ -13,11 +13,12 @@ const getProgression = (firstNum, progressionStep, length) => {
   return progression;
 };
 
+const length = 10;
+
 const gameQuestionAnswer = () => {
   const step = randNum(1, 10); // progression step is generated in the range from 1 to 10
   const firstNumProgression = randNum(1, 20);
   const hiddenNumIndex = randNum(0, 9);
-  const length = 10;
   const progression = getProgression(firstNumProgression, step, length);
   const hiddenNum = progression[hiddenNumIndex];
   progression[hiddenNumIndex] = '..';
