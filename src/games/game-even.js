@@ -6,9 +6,9 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const isEven = (number) => number % 2 === 0;
 
 const gameQuestionAnswer = () => {
-  const randNumber = randNum(1, 50);
-  const expectedAnswer = isEven(randNumber) ? 'yes' : 'no';
-  return [randNumber, expectedAnswer];
+  const question = randNum(1, 50);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 
 const brainEven = () => gameLogic(gameQuestionAnswer, description);
