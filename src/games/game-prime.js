@@ -18,9 +18,9 @@ const isPrimeNum = (number) => {
 };
 
 const gameQuestionAnswer = () => {
-  const randNumber = randNum(1, 50);
-  const expectedAnswer = isPrimeNum(randNumber) ? 'yes' : 'no';
-  return [randNumber, expectedAnswer];
+  const question = randNum(1, 50);
+  const answer = isPrimeNum(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 
 const brainPrime = () => gameLogic(gameQuestionAnswer, description);
